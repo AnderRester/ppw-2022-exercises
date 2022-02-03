@@ -39,4 +39,41 @@ console.log(typeof number);
 console.log(typeof line);
 console.log(typeof objectExample);
 
-// Eighth task
+// The end of theoretical part
+
+let enteredNumber = +prompt("Enter a digit | Введите цифру", 0);
+switch (enteredNumber) {
+    case 0:
+        alert("Zero | Ноль");
+        break;
+    case 1:
+        alert("One | Один");
+        break;
+    case 2:
+        alert("Two | Два");
+        break;
+    case 3:
+        alert("Three | Три");
+        break;
+    case 4:
+        alert("Four | Четыре");
+        break;
+    case 5:
+        alert("Five | Пять");
+        break;
+    case 6:
+        alert("Six | Шесть");
+        break;
+    case 7:
+        alert("Seven | Семь");
+        break;
+    case 8:
+        alert("Eight | Восемь");
+        break;
+    case 9:
+        alert("Nine | Девять");
+        break;
+    default:
+        alert("Out of barrier | Выход за границы условия");
+        break;
+}
