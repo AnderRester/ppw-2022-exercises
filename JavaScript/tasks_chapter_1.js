@@ -48,7 +48,7 @@ const chooseTaskCh1 = () => {
     let option = document.getElementById("variant_1").value;
     switch (Number(option)) {
         case 0:
-            //                      Task 2.1                              //
+            //                      Task 1.1                              //
             let enteredNumber = +prompt("Enter a digit | Введите цифру", 0);
             switch (enteredNumber) {
                 case 0:
@@ -87,13 +87,25 @@ const chooseTaskCh1 = () => {
             }
             break;
         case 1:
+            //                  Task 1.2                        //
+            const aBarrier = prompt("Введите значение левого барьера", 0);
+            const aBarrier = prompt("Введите значение правого барьера", 0);
+            let sum = 0;
+            for(let i = a; i <= b; i++) {
+                sum += i;
+            }
+            alert("Сумма элементов в интервале = ", sum);
+            break;
+        case 2:
+            //                  Task 1.3                    //
             const a = 5;
             const b = 8;
             const c = 2;
             alert(((a > b) && (b > c)) ? "Макс - a, Мин - c" : ((a > c) && (c > b)) ? "Макс - a, Мин - b" : ((b > a) && (a > c)) ? "Макс - b, Мин - c" : ((b > c) && (c > a)) ? "Макс - b, Мин - a" : ((c > a) && (a > b)) ? "Макс - c, Мин - b" : ((c > b) && (b > a)) ? "Макс - c, Мин - a" : 1);
             //alert("Мин - " + Math.min(a, b, c) + " Макс - " + Math.max(a, b, c));
             break;
-        case 2:
+        case 3:
+            //                  Task 1.4                    //
             const nickname = prompt("Введите имя", "Некто");
 
             const ucFirst = (nickname) => {
@@ -106,7 +118,8 @@ const chooseTaskCh1 = () => {
             }
             alert(ucFirst(nickname));
             break;
-        case 3:
+        case 4:
+            //                  Task 1.5                    //
             const CurrencyValue = prompt("Введите тип валюты и размер транзакции", "$5");
 
             const extractCurrencyValue = (CurrencyValue) => {
@@ -118,7 +131,8 @@ const chooseTaskCh1 = () => {
             }
             alert(extractCurrencyValue(CurrencyValue));
             break;
-        case 4:
+        case 5:
+            //                  Task 1.6                //
             const range = Number(prompt("Введите число в диапазоне от -1 до 1, включая 0", 0));
 
             if (range < 0) {
@@ -131,7 +145,8 @@ const chooseTaskCh1 = () => {
                 }
             }
             break;
-        case 5:
+        case 6:
+            //                  Task 1.7                //
             const min = 14;
             const max = 90;
 
@@ -173,7 +188,8 @@ const chooseTaskCh1 = () => {
             //     alert("Число не принадлежит интервалу");
             // }
             break;
-        case 6:
+        case 7:
+            //                  Task 1.8
             const user = {
                 name: "John",
                 pass: "ads2123"
@@ -196,7 +212,8 @@ const chooseTaskCh1 = () => {
                 }
             }
             break;
-        case 7:
+        case 8:
+            //                          Task 1.9                    //
             const username = prompt("Введите имя пользователя", "User");
 
             alert(`Привет ${username}`);
@@ -208,13 +225,8 @@ const chooseTaskCh1 = () => {
                 alert("Можно начать изучение прямо сейчас");
             }
             break;
-        case 8:
-            alert(1);
-            break;
         case 9:
-            alert(1);
-            break;
-        case 10:
+            //                  Task 1.10                   //
             const num = Number(prompt("Введите число"));
 
             const dividers = (num) => {
