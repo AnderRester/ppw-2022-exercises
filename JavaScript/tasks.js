@@ -195,3 +195,14 @@ if (result == true) {
 } else {
     alert("Можно начать изучение прямо сейчас");
 }
+
+const num = Number(prompt("Введите число"));
+
+function dividers(num) {
+    for (let i = 1; i <= num / 2; i++) {
+        if (num % i == 0) {
+            console.log(i);
+        }
+    }
+}
+dividers(num) + console.log(num);
