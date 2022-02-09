@@ -41,6 +41,8 @@ console.log(typeof objectExample);
 
 // The end of theoretical part
 
+const chooseTask = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
 let enteredNumber = +prompt("Enter a digit | Введите цифру", 0);
 switch (enteredNumber) {
     case 0:
