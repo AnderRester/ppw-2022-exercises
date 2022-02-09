@@ -89,9 +89,9 @@ const chooseTaskCh1 = () => {
         case 1:
             //                  Task 1.2                        //
             const aBarrier = prompt("Введите значение левого барьера", 0);
-            const aBarrier = prompt("Введите значение правого барьера", 0);
+            const bBarrier = prompt("Введите значение правого барьера", 0);
             let sum = 0;
-            for(let i = a; i <= b; i++) {
+            for(let i = aBarrier; i <= bBarrier; i++) {
                 sum += i;
             }
             alert("Сумма элементов в интервале = ", sum);
@@ -150,11 +150,10 @@ const chooseTaskCh1 = () => {
             const min = 14;
             const max = 90;
 
+            const answerSubUnit17 = +prompt("введите желаемый метод рассчёта (1-2)", 1);
             const age = Number(prompt(`Введите возраст в диапазоне от ${min} до ${max}`, 14));
-
             const check = () => {
-                let option = document.getElementById("variant").value;
-                switch (Number(option)) {
+                switch (Number(answerSubUnit17)) {
                     case 1:
                         if (!(age < 14) && !(age > 90)) {
                             alert("Число принадлежит интервалу");
@@ -171,6 +170,7 @@ const chooseTaskCh1 = () => {
                         break;
                 }
             }
+            check();
 
             // //C оператором НЕ
 
