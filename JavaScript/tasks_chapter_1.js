@@ -41,7 +41,55 @@ console.log(typeof objectExample);
 
 // The end of theoretical part
 
-const chooseTask = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+//          Choosing the task controller                //
+
+const chooseTaskCh1 = () => {
+    let option = document.getElementById("variant-1").value;
+    switch (Number(option)) {
+        case 1.1:
+            for (let i = 0; i < array.length; i++) {
+                alert(array[i]);
+            }
+            break;
+        case 1.2:
+            for (let i in array) {
+                alert(array[i]);
+            }
+            break;
+        case 1.3:
+            for (let i of array) {
+                alert(i);
+            }
+            break;
+        case 1.4:
+            array.forEach(i => alert(i));
+            break;
+        case 1.5:
+            let i = array.map((i) => { alert(i) });
+            // let i = array.map(function(num) {
+            //     alert(num);
+            // });
+            break;
+        case 1.6:
+            alert(1);
+            break;
+        case 1.7:
+            alert(1);
+            break;
+        case 1.8:
+            alert(1);
+            break;
+        case 1.9:
+            alert(1);
+            break;
+        case 1.10:
+            alert(1);
+            break;    
+    }
+}
+
+//                  Task 2.1                            //
 
 let enteredNumber = +prompt("Enter a digit | Введите цифру", 0);
 switch (enteredNumber) {

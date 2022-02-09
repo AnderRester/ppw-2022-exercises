@@ -2,7 +2,7 @@
 
 const array = [1, 2, 3, 4, 6, 0];
 
-const chooseTask = () => {
+const chooseTaskCh2 = () => {
     let option = document.getElementById("variant-2").value;
     switch (Number(option)) {
         case 1:
