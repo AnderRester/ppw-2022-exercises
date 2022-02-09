@@ -2,7 +2,7 @@
 console.log("Hello, world!");
 
 // Third task
-'use strict';
+//'use strict';
 
 // Fourth task
 let userName = "Student";
@@ -44,95 +44,133 @@ console.log(typeof objectExample);
 
 //          Choosing the task controller                //
 
+const array = [1, 2, 3, 4, 6, 0];
+
 const chooseTaskCh1 = () => {
-    let option = document.getElementById("variant-1").value;
+    let option = document.getElementById("variant_1").value;
     switch (Number(option)) {
-        case 1.1:
-            for (let i = 0; i < array.length; i++) {
-                alert(array[i]);
-            }
+        case 0:
+            //                  Task 2.1                            //
+        let enteredNumber = +prompt("Enter a digit | Введите цифру", 0);
+        switch (enteredNumber) {
+            case 0:
+                alert("Zero | Ноль");
+                break;
+            case 1:
+                alert("One | Один");
+                break;
+            case 2:
+                alert("Two | Два");
+                break;
+            case 3:
+                alert("Three | Три");
+                break;
+            case 4:
+                alert("Four | Четыре");
+                break;
+            case 5:
+                alert("Five | Пять");
+                break;
+            case 6:
+                alert("Six | Шесть");
+                break;
+            case 7:
+                alert("Seven | Семь");
+                break;
+            case 8:
+                alert("Eight | Восемь");
+                break;
+            case 9:
+                alert("Nine | Девять");
+                break;
+            default:
+                alert("Out of barrier | Выход за границы условия");
+                break;
+        }
             break;
-        case 1.2:
-            for (let i in array) {
-                alert(array[i]);
-            }
+        case 1:
+
+        
+            const a = 5;
+            const b = 8;
+            const c = 2;
+            alert(((a > b) && (b > c)) ? "Макс - a, Мин - c" : ((a > c) && (c > b)) ? "Макс - a, Мин - b" : ((b > a) && (a > c)) ? "Макс - b, Мин - c" : ((b > c) && (c > a)) ? "Макс - b, Мин - a" : ((c > a) && (a > b)) ? "Макс - c, Мин - b" : ((c > b) && (b > a)) ? "Макс - c, Мин - a" : 1);
             break;
-        case 1.3:
+        case 2:
             for (let i of array) {
                 alert(i);
             }
             break;
-        case 1.4:
+        case 3:
             array.forEach(i => alert(i));
             break;
-        case 1.5:
-            let i = array.map((i) => { alert(i) });
+        case 4:
+            let i = array.map((i) => alert(i));
             // let i = array.map(function(num) {
             //     alert(num);
             // });
             break;
-        case 1.6:
+        case 5:
             alert(1);
             break;
-        case 1.7:
+        case 6:
             alert(1);
             break;
-        case 1.8:
+        case 7:
             alert(1);
             break;
-        case 1.9:
+        case 8:
             alert(1);
             break;
-        case 1.10:
+        case 9:
             alert(1);
-            break;    
+            break;
+        case 10:
+            alert(1);
+            break;
     }
 }
 
-//                  Task 2.1                            //
+// //                  Task 2.1                            //
 
-let enteredNumber = +prompt("Enter a digit | Введите цифру", 0);
-switch (enteredNumber) {
-    case 0:
-        alert("Zero | Ноль");
-        break;
-    case 1:
-        alert("One | Один");
-        break;
-    case 2:
-        alert("Two | Два");
-        break;
-    case 3:
-        alert("Three | Три");
-        break;
-    case 4:
-        alert("Four | Четыре");
-        break;
-    case 5:
-        alert("Five | Пять");
-        break;
-    case 6:
-        alert("Six | Шесть");
-        break;
-    case 7:
-        alert("Seven | Семь");
-        break;
-    case 8:
-        alert("Eight | Восемь");
-        break;
-    case 9:
-        alert("Nine | Девять");
-        break;
-    default:
-        alert("Out of barrier | Выход за границы условия");
-        break;
-}
+// let enteredNumber = +prompt("Enter a digit | Введите цифру", 0);
+// switch (enteredNumber) {
+//     case 0:
+//         alert("Zero | Ноль");
+//         break;
+//     case 1:
+//         alert("One | Один");
+//         break;
+//     case 2:
+//         alert("Two | Два");
+//         break;
+//     case 3:
+//         alert("Three | Три");
+//         break;
+//     case 4:
+//         alert("Four | Четыре");
+//         break;
+//     case 5:
+//         alert("Five | Пять");
+//         break;
+//     case 6:
+//         alert("Six | Шесть");
+//         break;
+//     case 7:
+//         alert("Seven | Семь");
+//         break;
+//     case 8:
+//         alert("Eight | Восемь");
+//         break;
+//     case 9:
+//         alert("Nine | Девять");
+//         break;
+//     default:
+//         alert("Out of barrier | Выход за границы условия");
+//         break;
+// }
 
-const a = 5;
-const b = 8;
-const c = 2;
 
-alert(((a > b) && (b > c)) ? "Макс - a, Мин - c" : ((a > c) && (c > b)) ? "Макс - a, Мин - b" : ((b > a) && (a > c)) ? "Макс - b, Мин - c" : ((b > c) && (c > a)) ? "Макс - b, Мин - a" : ((c > a) && (a > b)) ? "Макс - c, Мин - b" : ((c > b) && (b > a)) ? "Макс - c, Мин - a" : 1);
 
 //alert("Мин - " + Math.min(a, b, c) + " Макс - " + Math.max(a, b, c));
 
@@ -159,12 +197,12 @@ const extractCurrencyValue = (CurrencyValue) => {
 }
 alert(extractCurrencyValue(CurrencyValue));
 
-const a = Number(prompt("Введите число в диапазоне от -1 до 1, включая 0", 0));
+const range = Number(prompt("Введите число в диапазоне от -1 до 1, включая 0", 0));
 
-if (a < 0) {
+if (range < 0) {
     alert("Меньше нуля");
 } else {
-    if (a > 0) {
+    if (range > 0) {
         alert("Больше нуля");
     } else {
         alert("Равно нулю");
@@ -218,16 +256,16 @@ const user = {
     pass: "ads2123"
 }
 
-const username = prompt("Введите имя пользователя", "User");
-const password = prompt("Введите пароль", "password");
+const usernameBase = prompt("Введите имя пользователя", "User");
+const passwordBase = prompt("Введите пароль", "password");
 
-if (user.name == username && user.pass == password) {
+if (user.name == usernameBase && user.pass == passwordBase) {
     alert("Привет");
 } else {
-    if (user.name == username && user.pass != password) {
+    if (user.name == usernameBase && user.pass != passwordBase) {
         alert("Неправильный пароль");
     } else {
-        if (user.name != username && user.pass == password) {
+        if (user.name != usernameBase && user.pass == passwordBase) {
             alert("Неправильный username");
         } else {
             alert("Ошибка Валидации");
