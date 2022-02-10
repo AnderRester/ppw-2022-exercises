@@ -38,40 +38,45 @@ const chooseTaskCh2 = () => {
             //                      Task 2.2                               //
 
             const dataBase = [
-                first = {
+                {
                     name: "First",
                     marks: [2, 2, 7, 5, 2]
                 },
-                second = {
+                {
                     name: "Second",
                     marks: [8, 10, 4, 5, 4]
                 },
-                third = {
+                {
                     name: "Third",
                     marks: [8, 9, 7, 5, 6]
                 },
-                firth = {
+                {
                     name: "Firth",
                     marks: [8, 10, 7, 5, 5]
                 },
-                fifth = {
+                {
                     name: "Fifth",
                     marks: [8, 10, 9, 10, 10]
                 }
             ]
-            let averageMarks = []
+
+            let averageMarks = [];
+            let findAverage = () => {
+            //let averageMarks = dataBase.map(dataBase.marks.reduce((prev, now) => now + prev));
+            for (let i = 0; i < dataBase.length; i++) {
+                averageMarks.push({name: dataBase[i].name, average_mark:((dataBase[i].marks.reduce((prev, curr) => curr + prev))/dataBase[i].marks.length)});
+                //alert(dataBase[i].marks);
+            }
+            console.log(averageMarks);
+            }
+
+            findAverage();
 
             // for (let i = 0; i < dataBase.length; i++) {
-            //     alert(dataBase[i].marks.length);
-            // }
+                //     unitAverage = Math.Average(dataBase[i].marks.length);
+                //     alert(1);
+                // }
 
-
-            // for (let i = 0; i < dataBase.length; i++) {
-            //     unitAverage = Math.Average(dataBase[i].marks.length);
-            //     alert(1);
-            // }
-
-            let unitAverage = 1;
             const average = () => {
                     for (let i = 0; i < dataBase.length; i++) {
                         for (let a = 0; a < dataBase[i].marks.length; a++) {
