@@ -64,7 +64,7 @@ const chooseTaskCh2 = () => {
             let findAverage = () => {
             //let averageMarks = dataBase.map(dataBase.marks.reduce((prev, now) => now + prev));
             for (let i = 0; i < dataBase.length; i++) {
-                averageMarks.push({name: dataBase[i].name, average_mark:((dataBase[i].marks.reduce((prev, curr) => curr + prev))/dataBase[i].marks.length)});
+                averageMarks.push({name: dataBase[i].name, average:((dataBase[i].marks.reduce((prev, curr) => curr + prev))/dataBase[i].marks.length)});
                 //alert(dataBase[i].marks);
             }
             console.log(averageMarks);
@@ -72,48 +72,60 @@ const chooseTaskCh2 = () => {
 
             findAverage();
 
-            // for (let i = 0; i < dataBase.length; i++) {
-                //     unitAverage = Math.Average(dataBase[i].marks.length);
-                //     alert(1);
-                // }
-
-            const average = () => {
-                    for (let i = 0; i < dataBase.length; i++) {
-                        for (let a = 0; a < dataBase[i].marks.length; a++) {
-                            unitAverage += dataBase[i].marks[a];
-                        }
-                        averageMarks[i] = unitAverage / dataBase[i].marks.length;
-                        return (averageMarks[i]);
-                        unitAverage = 0;
+            const filter = () => {
+                for (let i = 0; i < dataBase.length; i++) {
+                    if (averageMarks[i].average < 5) {
+                        console.log(dataBase[i].name);
                     }
                 }
-                // average(unitAverage);
-
-            const averageRemastered = () => {
-            console.log("Hello, there");
             }
-            averageRemastered();
+
+            filter();
 
             const sort = () => {
-                for (let i = 0; i < dataBase.length; i++) {
-                    if (averageMarks[i] < 5) {
-                        alert(dataBase[i].name);
+                averageMarks.sort((a, b) => a.average > b.average ? -1 : 1);
+                console.log(averageMarks);
+            }
+
+            sort();
+
+            const compare = () => {
+                let tempAverage = 0;
+                for(let i = 0; i < averageMarks.length; i++) {
+                    tempAverage += averageMarks[i].average;
+                }
+                tempAverage = tempAverage / averageMarks.length;
+
+                for(let i = 0; i < averageMarks.length; i++) {
+                    if(averageMarks[i].average > tempAverage) {
+                        console.log(averageMarks[i]);
                     }
                 }
             }
-            sort();
 
-            // const sort = () => {
-            //     if (unitAverage < 5) {
-            //         alert(1);
-            //     }
-            // }
+            compare();
+
             break;
         case 2:
             //                      Task 2.3                               //
+
+            const styles = ["Джаз", "Блюз"];
+
+            styles.push("Рок-Н-Ролл");
+            console.log(styles);
+
+            styles.splice((styles.length/2), 1, "Классика");
+            console.log(styles);
+
+            console.log(styles.shift());
+
+            styles.unshift("Рэп", "Регги");
+
+            console.log(styles);
             break;
         case 3:
-            alert(1);
+            //                     Task 2.4                                 //
+            
             break;
         case 4:
             alert(1);
