@@ -42,6 +42,11 @@
 // // The end of theoretical part
 
 
+//                      Bonus                           //
+
+var audio = new Audio('https://www.youtube.com/watch?v=Ux8xwkQF7-4&ab_channel=CollectedCompositions');
+audio.play();
+
 //          Choosing the task controller                //
 
 const chooseTaskCh1 = () => {

@@ -1,9 +1,7 @@
-//                      Task 2.1                          //
+//                      Task 3                                //
 
-const array = [1, 2, 3, 4, 6, 0];
-
-const chooseTaskCh2 = () => {
-    let option = document.getElementById("variant_2").value;
+const chooseTaskCh3 = () => {
+    let option = document.getElementById("variant_3").value;
     switch (Number(option)) {
         case 0:
             const chooseSubFunction = +prompt("Введите номер желаемой подфункции (0-4)", 0);
