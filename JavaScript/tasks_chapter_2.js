@@ -130,7 +130,7 @@ const chooseTaskCh2 = () => {
             const sumInputNumbers = () => {
             enteredInfo = +prompt("Введите число или цифру", 0);
 
-            while((enteredInfo / enteredInfo) == 1 || enteredInfo == 0) {
+            while((enteredInfo / enteredInfo) == 1 || enteredInfo == 0 && enteredInfo != null) {
                 enteredInfo = +prompt("Введите число или цифру", 0);
                 if(enteredInfo / enteredInfo === 1 || enteredInfo == 0) {
                     arrayOfInfo.push(enteredInfo);
