@@ -125,7 +125,24 @@ const chooseTaskCh2 = () => {
             break;
         case 3:
             //                     Task 2.4                                 //
-            
+            const arrayOfInfo = [];
+
+            const sumInputNumbers = () => {
+            enteredInfo = +prompt("Введите число или цифру", 0);
+
+            while((enteredInfo / enteredInfo) == 1 || enteredInfo == 0) {
+                enteredInfo = +prompt("Введите число или цифру", 0);
+                if(enteredInfo / enteredInfo === 1 || enteredInfo == 0) {
+                    arrayOfInfo.push(enteredInfo);
+                } else {
+                    console.log("Нарушение условий работы.")
+                    console.log(arrayOfInfo.reduce((a, b) => a + b));
+                    break;
+                }
+            }
+        }
+        sumInputNumbers();
+
             break;
         case 4:
             alert(1);
