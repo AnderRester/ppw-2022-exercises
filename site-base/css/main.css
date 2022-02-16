@@ -88,3 +88,23 @@ body {
     margin-top: 14%;
     color: rgb(221, 155, 221)
 }
+
+
+/*                      Animations                        */
+@keyframes pulse {
+    0% {
+        background: transparent;
+    }
+    25% {
+        background: rgba(255, 0, 43, 0.2);
+    }
+    50% {
+        background: rgba(255, 0, 43, 0.4);
+    }
+    75% {
+        background: rgba(255, 0, 43, 0.2);
+    }
+    100% {
+        background: transparent;
+    }
+}

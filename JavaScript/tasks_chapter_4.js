@@ -1,5 +1,26 @@
 //                      Task 4                                //
-document.body.style.background = 'red';
+
+//                      Example
+//document.body.style.background = 'red';
+
+document.addEventListener("DOMContentLoaded", () => {
+    // alert("DOM ready!");
+    document.body.style.background = 'red'
+  });
+
+setTimeout("document.body.style.background = 'green'", 3000);
+
+document.getElementsById("colorToOrange").addEventListener("click", colorToOrange);
+
+colorToOrange = () => {
+    document.body.style.background = 'orange';
+}
+
+let animTime = setInterval(animTest, 5)
+
+const animTest = () => {
+    let colorPulse = document.getElementById("body");
+}
 
 const chooseTaskCh4 = () => {
     let option = document.getElementById("variant_4").value;
