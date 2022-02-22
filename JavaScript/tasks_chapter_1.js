@@ -44,7 +44,8 @@
 
 //                      Bonus                           //
 
-var audio = new Audio('https://www.youtube.com/watch?v=Ux8xwkQF7-4&ab_channel=CollectedCompositions');
+var audio = new Audio('sources/music/bg_music.mp3');
+audio.muted = false;
 audio.play();
 
 //          Choosing the task controller                //
@@ -96,7 +97,7 @@ const chooseTaskCh1 = () => {
             const aBarrier = prompt("Введите значение левого барьера", 0);
             const bBarrier = prompt("Введите значение правого барьера", 0);
             let sum = 0;
-            for(let i = aBarrier; i <= bBarrier; i++) {
+            for (let i = aBarrier; i <= bBarrier; i++) {
                 sum += i;
             }
             alert("Сумма элементов в интервале = ", sum);
@@ -245,18 +246,3 @@ const chooseTaskCh1 = () => {
             break;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

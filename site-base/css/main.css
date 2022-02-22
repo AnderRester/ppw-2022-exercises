@@ -14,22 +14,39 @@ body {
     background-size: cover;
 }
 
-#chapter_cont {
-    /* display: inline-block;
-    margin-left: 7%;
-    margin-top: 7%; */
+#main_cont {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    box-shadow: inset 0 0 500px #000;
+    animation: pulse 3s ease-in-out infinite;
 }
+
+
+/* For inset shadow but doesnt work
+#main_cont::after {}
+*/
+
+
+/* #chapter_cont {
+    display: inline-block;
+} */
+
 
 /*                   Button style                 */
 
 .dropbtn {
-    background-color: #636363;
+    background-color: transparent;
     color: white;
     padding: 9px 0px 9px 0px;
     text-align: center;
     font-size: 16px;
     width: 160px;
     border: none;
+    animation: button_pulse 2s ease-in-out infinite, box_flicker 5s ease-in-out infinite;
+    /* animation: box_flicker 3s ease-in-out infinite; */
 }
 
 
@@ -39,8 +56,7 @@ body {
     position: inherit;
     display: block;
     width: 160px;
-    margin: auto;
-    margin-top: 4%;
+    margin: 4% auto auto 5%;
 }
 
 .dropbtn:hover .dropdown-content {
@@ -85,26 +101,81 @@ body {
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-size: 48px;
-    margin-top: 14%;
-    color: rgb(221, 155, 221)
+    margin-top: 10%;
+    color: rgb(221, 155, 221);
+    text-shadow: 0 0 7px rgb(186, 169, 231), 0 0 10px rgb(110, 68, 165), 0 0 21px rgb(159, 93, 212), 0 0 42px rgb(70, 60, 206), 0 0 82px rgb(121, 110, 221), 0 0 92px rgb(86, 81, 155), 0 0 102px rgb(110, 75, 192), 0 0 151px rgb(118, 100, 216);
+    animation: flicker 5s ease-in-out infinite;
 }
 
 
 /*                      Animations                        */
+
 @keyframes pulse {
     0% {
         background: transparent;
     }
     25% {
-        background: rgba(255, 0, 43, 0.2);
+        background: rgba(255, 0, 43, 0.03);
     }
     50% {
-        background: rgba(255, 0, 43, 0.4);
+        background: rgba(255, 0, 43, 0.1);
     }
     75% {
-        background: rgba(255, 0, 43, 0.2);
+        background: rgba(255, 0, 43, 0.03);
     }
     100% {
         background: transparent;
+    }
+}
+
+@keyframes button_pulse {
+    0% {
+        background: rgba(21, 9, 82, 0.514);
+    }
+    25% {
+        background: rgba(21, 9, 82, 0.614);
+    }
+    50% {
+        background: rgba(21, 9, 82, 0.914);
+    }
+    75% {
+        background: rgba(21, 9, 82, 0.614);
+    }
+    100% {
+        background: rgba(21, 9, 82, 0.514);
+    }
+}
+
+@keyframes box_flicker {
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+        box-shadow: 0 0 4px rgb(98, 71, 194), 0 0 11px rgb(113, 111, 216), 0 0 10px rgb(100, 76, 189), 0 0 20px rgb(97, 73, 202), 0 0 40px rgb(86, 52, 165), 0 0 45px rgb(58, 60, 173), 0 0 50px rgb(58, 60, 190), 0 0 75px rgb(96, 77, 204);
+    }
+    20%,
+    24%,
+    55% {
+        box-shadow: none;
+    }
+}
+
+@keyframes flicker {
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+        text-shadow: 0 0 4px rgb(98, 71, 194), 0 0 11px rgb(113, 111, 216), 0 0 19px rgb(100, 76, 189), 0 0 40px rgb(97, 73, 202), 0 0 80px rgb(86, 52, 165), 0 0 90px rgb(58, 60, 173), 0 0 100px rgb(58, 60, 190), 0 0 150px rgb(96, 77, 204);
+    }
+    20%,
+    24%,
+    55% {
+        text-shadow: none;
     }
 }
