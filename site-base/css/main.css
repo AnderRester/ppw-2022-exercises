@@ -10,11 +10,14 @@
 
 body {
     background-image: url(../images/bg.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* background-repeat: no-repeat; */
+    background-size: 100%;
+    object-fit: cover;
 }
 
 #main_cont {
+    top: 0;
+    left: 0;
     content: '';
     width: 100%;
     height: 100%;
@@ -22,6 +25,7 @@ body {
     z-index: 1;
     box-shadow: inset 0 0 500px #000;
     animation: pulse 3s ease-in-out infinite;
+    object-fit: cover;
 }
 
 
@@ -46,7 +50,6 @@ body {
     width: 160px;
     border: none;
     animation: button_pulse 2s ease-in-out infinite, box_flicker 5s ease-in-out infinite;
-    /* animation: box_flicker 3s ease-in-out infinite; */
 }
 
 
@@ -56,7 +59,7 @@ body {
     position: inherit;
     display: block;
     width: 160px;
-    margin: 4% auto auto 5%;
+    margin: 6% auto auto 5%;
 }
 
 .dropbtn:hover .dropdown-content {
