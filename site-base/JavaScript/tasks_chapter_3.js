@@ -105,10 +105,9 @@ const chooseTaskCh3 = () => {
                 }
             ];
             const reconstructArray = (array) => {
-                for (i in array) {
-                    for (key in array[i]) {
+                for (let i in array) {
+                    for (let key in array[i]) {
                         console.log(array[i][key]);
-                        //console.log(typeof(array[i][key]));
                         if (!Number(array[i][key])) {
                             array.splice(i, 1);
                         }
@@ -227,6 +226,7 @@ const chooseTaskCh3 = () => {
                         if (personTenMark2[key] == personTenMark1[key]) {
                             PersonTenMark3[key] = personTenMark1[key];
                         } else if (personTenMark1[key][subKey] == personTenMark2[key][subKey]) {
+                            PersonTenMark3[key] = personTenMark2[key];
                             PersonTenMark3[key][subKey] = personTenMark1[key][subKey];
                         }
                     }

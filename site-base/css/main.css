@@ -104,10 +104,18 @@ body {
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-size: 48px;
-    margin-top: 10%;
+    margin-top: 5%;
     color: rgb(221, 155, 221);
     text-shadow: 0 0 7px rgb(186, 169, 231), 0 0 10px rgb(110, 68, 165), 0 0 21px rgb(159, 93, 212), 0 0 42px rgb(70, 60, 206), 0 0 82px rgb(121, 110, 221), 0 0 92px rgb(86, 81, 155), 0 0 102px rgb(110, 75, 192), 0 0 151px rgb(118, 100, 216);
     animation: flicker 5s ease-in-out infinite;
+}
+
+#sub4Chapter {
+    float: right;
+    margin-right: 3%;
+    margin-top: 10%;
+    width: 300px;
+    background: #000;
 }
 
 

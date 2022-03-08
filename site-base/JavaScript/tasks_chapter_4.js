@@ -48,19 +48,20 @@ const chooseTaskCh4 = () => {
             // let liFirst = document.createElement('li');
 
             function reconstructPage() {
+                let li = document.getElementsByClassName('');
                 for (let i = 0; i < 20; i++) {
                     // let fragment = new DocumentFragment();
                     // let li = document.createElement('li');
                     // li.append(i);
                     // // ol_name.append('li').innerHTML = `Элемент {i}`;
                     // fragment.append(li);
-                    setTimeout(() => $("#sub4Chapter").prepend(`<li id="list">${i}<li>`) = "#e7e7e7", 2000);
+                    //setTimeout(() => $(".listDOM").prepend(`<li id="list">${i}<li>`) = "#e7e7e7", 2000);
 
                     //$("#sub4Chapter").prepend("<p>Test</p>");
                 }
             }
             sub4Chapter.append(reconstructPage());
-            document.getElementById("list").style.background = "#e7e7e7";
+            // reconstructPage();
 
             break;
         case 4:
