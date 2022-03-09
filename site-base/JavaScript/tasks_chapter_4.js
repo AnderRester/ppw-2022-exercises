@@ -28,7 +28,6 @@ function colorToOrange() {
 // const animTest = () => {
 //     let colorPulse = document.getElementById("body");
 // }
-
 const chooseTaskCh4 = () => {
     let option = document.getElementById("variant_4").value;
     switch (Number(option)) {
@@ -46,26 +45,45 @@ const chooseTaskCh4 = () => {
         case 3:
             // let ol = document.createElement('ol').id = "ol";
             // let liFirst = document.createElement('li');
-
             function reconstructPage() {
-                let li = document.getElementsByClassName('');
-                for (let i = 0; i < 20; i++) {
-                    // let fragment = new DocumentFragment();
-                    // let li = document.createElement('li');
-                    // li.append(i);
-                    // // ol_name.append('li').innerHTML = `Элемент {i}`;
-                    // fragment.append(li);
-                    //setTimeout(() => $(".listDOM").prepend(`<li id="list">${i}<li>`) = "#e7e7e7", 2000);
-
-                    //$("#sub4Chapter").prepend("<p>Test</p>");
+                const foundation = document.getElementById("listDOM");
+                for(let i = 1; i <= 20; i++){
+                    setTimeout(function(){
+                        let listElement = document.createElement("li");
+                    listElement.innerHTML = `Element ${i}`;
+                    if(i%2==0){
+                        listElement.style.background = "green";
+                        foundation.append(listElement);
+                    } else {
+                        listElement.style.background = "violet";
+                        foundation.append(listElement);
+                    }
+                    }, 2000*i);
                 }
             }
-            sub4Chapter.append(reconstructPage());
-            // reconstructPage();
-
+            reconstructPage();
             break;
         case 4:
-
+            const settingsContInput = document.getElementById("settingsContField");
+            settingsContInput.setAttribute("readonly", true);
+            const settingsContMinus = document.getElementById("settingsContMinus");
+            const settingsContPlus = document.getElementById("settingsContPlus");
+            settingsContMinus.addEventListener("click", function() {
+                if(settingsContInput.value >= 1) {
+                    settingsContPlus.disabled =  false;
+                    return settingsContInput.value = +settingsContInput.value-1;
+                } else {
+                    settingsContMinus.setAttribute("disabled", true);
+                }
+            });
+            settingsContPlus.addEventListener("click", function() {
+                if(settingsContInput.value < 9) {
+                    settingsContMinus.disabled =  false;
+                    return settingsContInput.value = +settingsContInput.value + 1;
+                } else {
+                    settingsContPlus.setAttribute("disabled", true);
+                }
+            });
             break;
         case 5:
 
